@@ -2,26 +2,27 @@
 import React from "react";
 
 class ClickityClick extends React.Component {
-    constructor(){
-        super();
-
-        this.state = {
-            hasBeenClicked: false,
-        };
+    constructor() {
+      super();
+  
+      this.state = {
+        hasBeenClicked: false,
+      };
     }
 
-    handleCLick = () => {
+    handleClick = () => {
         this.setState({
-            hasBeenClicked: true,
-        },  console.log(this.state.hasBeenClicked))   
+          hasBeenClicked: true
+        })
     }
+      
 
     render() {
         return (
-            <div>
-                <p>I have {this.state.hasBeenClicked ? null : "not"}</p>
-                <button onClick={this.handleCLick}>Click me!</button>
-            </div>
+          <div>
+            <p>I have {this.state.hasBeenClicked ? null : "not"} been clicked!</p>
+            <button onClick={this.handleClick}>Click me!</button>
+          </div>
         );
     }
 }
